@@ -1,0 +1,11 @@
+{"project":"simple-ready","mode":"Simple","state":"ready","format":"json","result":"pass","exitCode":0}
+{"project":"simple-ready","mode":"Simple","state":"ready","format":"jsonl","result":"pass","exitCode":0}
+{"project":"simple-no-runs","mode":"Simple","state":"no-runs","format":"json","result":"pass","exitCode":0}
+{"project":"simple-no-runs","mode":"Simple","state":"no-runs","format":"jsonl","result":"pass","exitCode":0}
+{"project":"simple-no-queries","mode":"Simple","state":"no-queries","format":"json","result":"pass","exitCode":0}
+{"project":"simple-no-queries","mode":"Simple","state":"no-queries","format":"jsonl","result":"pass","exitCode":0}
+{"project":"advanced-ready","mode":"Advanced","state":"ready","format":"json","result":"pass","exitCode":0}
+{"project":"advanced-ready","mode":"Advanced","state":"ready","format":"jsonl","result":"pass","exitCode":0}
+{"project":"advanced-no-runs","mode":"Advanced","state":"no-runs","format":"json","result":"pass","exitCode":0}
+{"project":"advanced-no-runs","mode":"Advanced","state":"no-runs","format":"jsonl","result":"pass","exitCode":0}
+{"cases":5,"builtCliInvocations":10,"result":"pass","providerCalls":0}
