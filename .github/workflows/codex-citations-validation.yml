@@ -1,0 +1,29 @@
+name: Validate citation JSONL fix
+on:
+  push:
+    branches: [codex/validate-citations-jsonl]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 300a4d47b92843647702b26e4118453eea10b0d4
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: ./.github/actions/setup
+      - run: mkdir -p .tmp/codex-citations-jsonl
+      - run: pnpm check 2>&1 | tee .tmp/codex-citations-jsonl/check-linux.log
+        shell: bash
+      - run: pnpm verify 2>&1 | tee .tmp/codex-citations-jsonl/verify-linux.log
+        shell: bash
+      - run: pnpm build:cli 2>&1 | tee .tmp/codex-citations-jsonl/build-linux.log
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: citations-jsonl-300a4d4
+          path: .tmp/codex-citations-jsonl/*.log
